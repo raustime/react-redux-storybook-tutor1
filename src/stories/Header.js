@@ -1,9 +1,18 @@
 import React from 'react'
 import './Header.css'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Button } from '@material-ui/core'
 
-function Header({title}) {
+import styled, { css } from 'styled-components'
+
+const Button=styled.button`
+    margin: 10px;
+    padding: 10px;
+    ${props=>props.darkMode && css`
+        background: gray;
+    `}
+`;
+
+function Header({title, userImage, darkMode}) {
     return (
         <div className="header">
             <div className="header__left">
@@ -11,7 +20,7 @@ function Header({title}) {
             </div>
             {title && <h2>{title}</h2>}
             <div className="header__right">
-                <Button>Login</Button>
+                <Button darkMode={darkMode}>Login</Button>
                 <Button>Register</Button>
             </div>
             <div className="header__right-mobile">

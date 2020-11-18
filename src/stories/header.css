@@ -8,10 +8,10 @@
     object-fit: contain;
     height: 100px;
 }
-.header__right > button {
+/* .header__right > button {
     padding: 10px;
     margin: 10px;
-}
+} */
 
 .header__right-mobile {
     display: none;
